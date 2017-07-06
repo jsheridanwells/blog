@@ -1,3 +1,3 @@
 # blog
 Personal Blog Page
-NSS Static Web Exercises #1
+Static Web | HTML Exercise 1  |  CSS Exercise 1
