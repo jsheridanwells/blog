@@ -1,8 +1,84 @@
-header, article, footer {
-	margin: 2em;
+/*CONTAINER STYLES*/
+
+.container {
+	max-width: 90%;
 }
 
-article p {
-	background-color: #eee;
-	padding: 2em;
+nav {
+	padding: 1em;
+	background-color: tan;
 }
+
+/*LIST AND LINK STYLES*/
+ul.nav {
+	list-style-type: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+}
+
+ul.nav li.active {
+	background-color: #333;
+	color: #fff;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+ul.sidebar {
+	list-style-type: none;
+	padding: 0;
+}
+
+ul.sidebar li {
+	font-size: 0.8em;
+}
+
+/*TEXT STYLES*/
+p.article {
+	padding: 1em;
+	background-color: #ddd;
+}
+p.author-date {
+	font-size: 0.8em;
+	float: right;
+}
+
+/*ADD BLOG ENTRY FIELD*/
+#entry-field {
+	display: flex;
+	flex-direction: column;
+	padding: 1em;
+	min-height: 30em;
+}
+
+#entry-field textarea {
+	margin: 1em;
+	min-height: 20em;
+}
+#entry-field button {
+	width: 300px;
+	float: right;
+}
+
+
+/*CLASSES FOR TOGGLING ADD BLOG ENTRY*/
+
+.visible {
+	display: initial;
+}
+.hidden {
+	display: none;
+}
+
+
+
+
+
+
+
+
+
+
