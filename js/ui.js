@@ -38,6 +38,13 @@ function getDate() {
 }
 
 function postData(title, text) {
+	let now = new Date();
+	let authorDate = document.createElement('p');
+	authorDate.className = 'author-date';
+	authorDate.innerHTML = `by Jeremy Wells on
+		${months[now.getMonth()]}
+		${now.getDate()} 
+		${now.getFullYear()}`
 	let post = document.createElement('p');
 	post.className = 'article';
 	post.innerText = text;
@@ -46,15 +53,10 @@ function postData(title, text) {
 	blogTitle.innerText = title;
 	blogField.appendChild(blogTitle);
 	blogField.appendChild(post);
+	blogField.appendChild(authorDate);
 	titleField.value = '';
 	blogText.value = '';
 }
-// 3.  user clicks add entry button
-//   3.1 get value of title field
-//   3.2 get value of post
-//   3.3 get month of post
-//   3.4 get date of post
-//   3.5 get year of post
 
 // 4. values of title, post, and date are added to the page
 //   4.1 title in h2 class title
