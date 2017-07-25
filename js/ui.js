@@ -43,7 +43,7 @@ function postData(title, text) {
 	authorDate.className = 'author-date';
 	authorDate.innerHTML = `by Jeremy Wells on
 		${months[now.getMonth()]}
-		${now.getDate()} 
+		${now.getDate()}
 		${now.getFullYear()}`
 	let post = document.createElement('p');
 	post.className = 'article';
