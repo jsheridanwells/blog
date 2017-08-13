@@ -2,6 +2,7 @@
 
 let Factory = {};
 
+//load JSON data from Firebase
 Factory.loadPosts = function() {
 	return new Promise((resolve, reject) => {
 		$.ajax({

@@ -2,7 +2,10 @@
 
 let Factory = require('./blog_factory.js');
 
-function postBlogs(data) {
+let Blog = {};
+
+//post blog data read from JSON file
+Blog.postBlogs = (data) => {
 	data.forEach((post)=>{
 		let $section = $('<section></section>');
 		let content = `
@@ -12,11 +15,11 @@ function postBlogs(data) {
 		$section.html(content);
 		$('#blog-field').append($section);
 	});
-}
+};
 
-function postSidebar(data) {
+//post blog titles to sidebar read from JSON file
+Blog.postSidebar = (data) => {
 	data.forEach((title)=>{
-		console.log("title", title.title);
 		let $li = $('<li></li>');
 		let content = `
 			<a href="#">${title.title}</a>
@@ -24,10 +27,13 @@ function postSidebar(data) {
 		$li.html(content);
 		$('#sidebar-list').append($li);
 	});
-}
+};
 
+//load JSON data and post data to DOM w/ above functions
 Factory.loadPosts()
 	.then(function(data){
-		postBlogs(data);
-		postSidebar(data);
+		Blog.postBlogs(data);
+		Blog.postSidebar(data);
 	});
+
+module.exports = Blog;
