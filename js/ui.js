@@ -58,11 +58,6 @@ function postData(title, text) {
 	blogText.value = '';
 }
 
-// 4. values of title, post, and date are added to the page
-//   4.1 title in h2 class title
-//   4.2 post in p class article
-//   4.3 month, date, and year in date field
-
 addBlogEntry.addEventListener('click', showEntry);
 blogList.addEventListener('click', showBlog);
 postButton.addEventListener('click', ()=>{
